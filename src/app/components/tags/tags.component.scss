@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+
+  .container {
+
+    a {
+
+      border-radius: 15px;
+      background-color: whitesmoke;
+      margin: 8px;
+      padding: 4px 6px;
+      color: blue;
+    }
+
+  }
+
+  .container:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,39 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found [visible]="!foods || foods.length <=0" notFoundMessage="Food Not Found"
+  resetLinkText="Reset Search"></app-not-found>
+<div class="wrapper">
+  <div class="container">
+    <div *ngFor="let food of foods">
+      <a href="" routerLink="/food/{{food.id}}">
+        <div class="sub-container">
+          <div class="info">
+            <img [src]="food.image" alt="">
+            <div class="content">
+              <div class="title">
+                <span class="name">{{food.name}}</span>
+                <span class="favourite {{food.isFavourite? '' : 'not'}} ">&#10084;</span>
+              </div>
+              <div class="food-info">
+                <div class="star-raiting">
+                  <star-rating [value]="food.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="black"
+                    size="18px" [readonly]="true">
+                  </star-rating>
+                </div>
+                <div class="cook">
+                  <div>
+                    <div class="origin" *ngFor="let origin of food.origins">{{origin}} </div>
+                  </div>
+                  <div class="cookTime">
+                    <span> &#9200; </span><span>{{food.cookTime}}</span>
+                  </div>
+                </div>
+                <div class="price">{{food.price | currency}} </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

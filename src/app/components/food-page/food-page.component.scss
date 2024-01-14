@@ -1,0 +1,98 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    box-sizing: border-box;
+    margin: 100px;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+
+    border: 1px solid whitesmoke;
+
+
+
+    img {
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .info {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 40px;
+
+      .nameInfo {
+        display: flex;
+        justify-content: space-between;
+
+        .favourite {
+          color: rgb(237, 99, 99);
+          font-size: 30px;
+        }
+
+        .not {
+          color: gray;
+        }
+
+        .name {
+          font-size: 30px;
+        }
+
+      }
+
+      .origins {
+
+        display: flex;
+
+        .origin {
+          margin-right: 7px;
+        }
+
+      }
+
+      .tags {
+        display: flex;
+        flex-direction: row;
+      }
+
+
+
+      .cook::before {
+        content: 'Time to cook about: ';
+        color: rgb(161, 158, 158);
+      }
+
+      .price {
+        font-size: 24px;
+        color: green;
+      }
+
+      .price::before {
+        content: 'Price:';
+        color: rgb(161, 158, 158);
+      }
+
+      button {
+        background-color: rgb(222, 88, 88);
+        color: white;
+        border-radius: 15px;
+        height: 38px;
+        border: none;
+        outline: none;
+      }
+
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.wrapper {
+  margin: 15px;
+
+
+  .container {
+    margin: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+
+
+    .sub-container {
+      width: 400px;
+      height: 435px;
+      box-sizing: border-box;
+      border: 1px solid whitesmoke;
+      border-radius: 16px;
+      margin: 16px;
+      overflow: hidden;
+      color: rgb(206, 73, 73);
+
+      .info {
+        display: flex;
+        flex-direction: column;
+
+
+
+        .content {
+          margin: 8px;
+          padding: 8px;
+
+
+          .title {
+            position: relative;
+
+            .favourite {
+              position: absolute;
+              right: 5px;
+              font-size: 22px;
+            }
+
+
+
+
+            .favourite.not {
+              color: gray;
+            }
+
+          }
+
+          .food-info {
+            .star-raiting {
+              margin-top: 8px;
+            }
+
+            .cook {
+              margin-top: 8px;
+              display: flex;
+              justify-content: space-between;
+
+
+              .origin {
+                display: inline;
+                color: rgb(98, 94, 94);
+                background-color: whitesmoke;
+                border-radius: 3px;
+                font-size: 14px;
+
+              }
+
+              .cookTime span {
+                font-size: 14px;
+
+
+              }
+            }
+
+            .price {
+              margin-top: 8px;
+              font-size: 15px;
+              color: gray;
+            }
+
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+      }
+
+      .info:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+    }
+  }
+}
